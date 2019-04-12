@@ -45,19 +45,18 @@ const init = async () => {
         {
             plugin: hapiSwagger,
             options: swaggerOptions
-        },
-        {
-        plugin: require('hapi-pino'),
-        options: {
-            prettyPrint: true,
-            stream:process.stdout,
-            level:'info'
-            }
         }
+        // {
+        // plugin: require('hapi-pino'),
+        // options: {
+        //     prettyPrint: true,
+        //     }
+        // }
     ]);
     
     await server.start();
     console.log(`Server running at: ${server.info.uri} `+ `(${swaggerHost})`);
+
 };
 
 process.on('unhandledRejection', (err) => {
