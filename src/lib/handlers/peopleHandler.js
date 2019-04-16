@@ -27,10 +27,7 @@ const getRange = async (request, h) => {
     }
     catch (error) {
         logger.error(error);
-        return h.response({
-            status: 503,
-            error: 'Sorry an error occurred'
-        }).statusCode = 503
+        throw new Error(error);
     }
 }
 
@@ -50,10 +47,7 @@ const searchByName = async (request, h) => {
     }
     catch (error) {
         logger.error(error);
-        return h.response({
-            status: 503,
-            error: 'Sorry an error occurred'
-        }).statusCode = 503
+        throw new Error(error);
     }
 }
 
@@ -66,10 +60,7 @@ const getPersonByEmail = async (request, h) => {
     }
     catch (error) {
         logger.error(error);
-        return h.response({
-            status: 503,
-            error: 'Sorry an error occurred'
-        }).statusCode = 503
+        throw new Error(error);
     }
 }
 
@@ -82,10 +73,7 @@ const getPeopleByState = async (request, h) => {
     }
     catch (error) {
         logger.error(error);
-        return h.response({
-            status: 503,
-            error: 'Sorry an error occurred'
-        }).statusCode = 503
+        throw new Error(error);
     }
 }
 
@@ -98,10 +86,7 @@ const savePerson = async (request, h) => {
     }
     catch (error) {
         logger.error(error);
-        return h.response({
-            status: 503,
-            error: 'Sorry an error occurred'
-        }).statusCode = 503
+        throw new Error(error);
     }
 }
 
