@@ -4,6 +4,7 @@
   "description": "A test used to interview and test SDET",
   "main": "node src/server.js",
   "scripts": {
+    "start": "node src/server.js",
     "debug": "node --inspect src/server.js",
     "test": "mocha --inspect --timeout 100000 tests"
   },
@@ -27,6 +28,7 @@
     "jsonfile": "^5.0.0",
     "path": "^0.12.7",
     "pino": "^5.12.2",
+    "request": "^2.88.0",
     "vision": "^5.4.4"
   },
   "devDependencies": {
