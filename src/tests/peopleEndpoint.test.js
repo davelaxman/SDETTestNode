@@ -1,7 +1,6 @@
 'use strict';
 
 const
-    {describe, it, before, after} = require('mocha'),
     assert = require('chai').assert,
     fork = require('child_process').fork,
     validator = require('jsonschema').Validator,
@@ -12,25 +11,7 @@ let  apiUnderTest = null;
 
 describe('People Endpoint API Tests', function(){
     this.timeout(10000);
-    // before ((done) => {
-
-    //     apiUnderTest = fork('../server',[],{
-    //         stdio:'pipe'
-    //     })
-    //     apiUnderTest.on('error', error=>{
-    //         console.log(error);
-    //     })
-    //     apiUnderTest.on('message', msg=>{
-    //         if(msg.contains('Server running at')){
-    //             console.log(msg);
-    //             done();
-    //         }
-    //         else{
-    //             console.log(msg);
-    //         }
-    //     })
-        
-    // });
+  
 
     describe("General Tests", () => {
 

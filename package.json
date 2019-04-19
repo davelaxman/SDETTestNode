@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/server.js",
     "debug": "node --inspect src/server.js",
-    "test": "mocha --inspect --timeout 100000 tests"
+    "test": "node_modules/mocha/bin/_mocha --inspect --timeout 100000 src/tests"
   },
   "repository": {
     "type": "git",
